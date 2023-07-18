@@ -2,14 +2,117 @@
   margin: 0;
   padding: 0;
   font-family: Poppins, sans-serif;
+  color: #fff;
 }
 
-.testezinho {
-  color: #315CF4;
-}
-
-.twoTest {
+.mainBody {
   background-color: #2C2C2C;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataView {
+  display: flex;
+  align-items: center;
+}
+
+.btnGp-root {
+  background-color: #315CF4;
+  color: #fff;
+  width: 20vw;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  height: 6vh;
+  box-shadow: 0px 4px 100px 0px #315CF4;
+  border: none;
+  font-family: Poppins, sans-serif;
+  font-size: 0.9vw;
+}
+.btnGp-root:hover {
+  background-color: #3E68FD;
+  transition: 0.3s;
+  width: 20.3vw;
+  height: 6.3vh;
+}
+
+.mainContent-dataView-paragraf {
+  margin-left: 2vw;
+}
+
+.mainContent-dataView-imgEye {
+  width: 3vw;
+  margin-left: 2vw;
+}
+
+.dataView:hover {
+  cursor: pointer;
+  transition: 0.6s;
+  background-color: #3D3D3D;
+}
+
+.linkroot {
+  text-decoration: none;
+}
+
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.inputRoot {
+  background-color: transparent;
+  border-color: #fff;
+  border-radius: 0.3vw;
+  outline: none;
+  width: 20vw;
+  height: 3vh;
+  padding: 8px;
+  border: 2.5px solid;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.btnGp-root-mainForm {
+  background-color: #315CF4;
+  color: #fff;
+  width: 10vw;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  height: 6vh;
+  box-shadow: 0px 4px 100px 0px #315CF4;
+  border: none;
+  font-family: Poppins, sans-serif;
+  font-size: 0.9vw;
+}
+.btnGp-root-mainForm:hover {
+  background-color: #3E68FD;
+  transition: 0.3s;
+  width: 10.3vw;
+  height: 6.3vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

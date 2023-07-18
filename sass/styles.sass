@@ -1,14 +1,58 @@
-@use 'teste'
-
-@import "test"
-
+@import "buttons"
+@import "colors"
+@import "input"
+    
 *
     margin: 0
     padding: 0
     font-family: Poppins, sans-serif
+    color: $white
 
-.testezinho
-    color: teste.$teste-cor
+.mainBody
+    background-color: $bg-color
+    width: 100vw
+    height: 100vh
 
-.twoTest
-    @include theme($theme: #2C2C2C)
+.mainContent
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+
+.dataView
+    display: flex
+    align-items: center
+
+.btnGp-root
+    @include buttonColor
+
+.mainContent-dataView-paragraf
+    margin-left: 2vw
+
+.mainContent-dataView-imgEye
+    width: 3vw
+    margin-left: 2vw
+
+.dataView
+    &:hover
+        cursor: pointer
+        transition: 0.6s
+        background-color: $medium-grey
+
+.linkroot
+    text-decoration: none
+
+.mainForm
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100vh
+
+
+.inputRoot
+    @include inputRoot
+
+.btnGp-root-mainForm
+    @include buttonColor($width: 10vw)

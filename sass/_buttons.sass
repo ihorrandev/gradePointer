@@ -1,0 +1,33 @@
+@mixin hoverEffect ($widthHover:0, $heightHover:0)
+    &:hover
+        background-color: #3E68FD
+        transition: 0.3s
+        width: $widthHover
+        height: $heightHover
+
+@mixin buttonColor($bgColor: #315CF4, $fontColor: #fff, $width: 20vw, $height:6vh, $radius: 8px, $fontSize: 0.9vw, $marginB: 5vh, $marginT: 2vh)
+    background-color: $bgColor
+    color: $fontColor
+    width: $width
+    text-align: center
+    border-radius: $radius
+    cursor: pointer
+    border-radius: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: $marginT
+    margin-bottom: $marginB
+    height: $height
+    box-shadow: 0px 4px 100px 0px #315CF4
+    @include hoverEffect ($widthHover: $width + 0.3, $heightHover: $height + 0.3)
+    border: none
+    font-family: Poppins, sans-serif
+    font-size: $fontSize
+    
+
+
+        
+
+
+    
