@@ -1,2 +1,14 @@
-div 
-    background-color: blue
+@use 'teste'
+
+@import "test"
+
+*
+    margin: 0
+    padding: 0
+    font-family: Poppins, sans-serif
+
+.testezinho
+    color: teste.$teste-cor
+
+.twoTest
+    @include theme($theme: #2C2C2C)
