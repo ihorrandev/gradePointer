@@ -1,13 +1,13 @@
 @import "colors"
     
-@mixin inputRoot()
+@mixin inputRoot($width:20vw, $height:3vh, $marginT: 2vh, $marginB: 2vh)
     background-color: transparent
     border-color: $white
     border-radius: 0.3vw
     outline: none
-    width: 20vw
-    height: 3vh
+    width: $width
+    height: $height
     padding: 8px
     border: 2.5px solid
-    margin-top: 2vh
-    margin-bottom: 2vh
+    margin-top: $marginT
+    margin-bottom: $marginB

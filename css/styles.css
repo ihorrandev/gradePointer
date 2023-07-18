@@ -76,12 +76,16 @@
   height: 100vh;
 }
 
+.tittle {
+  font-size: 2vw;
+}
+
 .inputRoot {
   background-color: transparent;
   border-color: #fff;
   border-radius: 0.3vw;
   outline: none;
-  width: 20vw;
+  width: 30vw;
   height: 3vh;
   padding: 8px;
   border: 2.5px solid;
