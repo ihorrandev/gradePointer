@@ -32,14 +32,16 @@
 <body>
 
     <div class="mainBody">
-        <div class="mainForm">
-            <h1 class="tittle">Calculate your student's grade point average</h1>
-            <input type="text" class="inputRoot" placeholder="Your school subject">
-            <input type="text" class="inputRoot" placeholder="Your school subject">
-            <input type="text" class="inputRoot" placeholder="Your school subject">
+        <div class="mainForm" id="divMainForm">
+            <h1 class="tittle" id="tittleContent">Calculate your student's grade point average</h1>
+            <input type="text" class="inputRoot" placeholder="Your school subject" id="inputSchoolSubject">
+            <input type="text" class="inputRoot" placeholder="Student Name" id="inputStudentName">
+            <input type="text" class="inputRoot" placeholder="Enter the number of assessment activities" id="inputNumberActivities">
 
-            <button class="btnGp-root-mainForm">Continue</button>
+            <button class="btnGp-root-mainForm" id="buttonForm" onclick="clickButton()">Continue</button>
         </div>
     </div>
+
+    <script src="../js/firstPage.js"></script>
 </body>
 </html>
