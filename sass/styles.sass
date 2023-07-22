@@ -1,6 +1,8 @@
 @import "buttons"
 @import "colors"
 @import "input"
+@import "validation"
+
     
 *
     margin: 0
@@ -58,3 +60,6 @@
 
 .btnGp-root-mainForm
     @include buttonColor($width: 10vw)
+
+.inputError
+    @include inputRootError()

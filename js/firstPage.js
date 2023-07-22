@@ -9,9 +9,12 @@
     let mainContent = document.getElementById('divMainForm');
     let mainTittle = document.getElementById('tittleContent');
 
+
     let valueFrominputSchoolSubject = "";
     let valueFrominputStudentName = "";
-    let valueFrominputNumberActivities = ""; 
+    let valueFrominputNumberActivities = "";
+
+
 
 const removeElementInHTML = () => {
     // Function to remove an HTML element 
@@ -24,17 +27,25 @@ const removeElementInHTML = () => {
     });
 }
 
-const getValuesInputs = () => {
+const getFirstContact = (position) => {
     valueFrominputSchoolSubject = document.getElementById('inputSchoolSubject').value;
     valueFrominputStudentName = document.getElementById('inputStudentName').value;
     valueFrominputNumberActivities = document.getElementById('inputNumberActivities').value;
     
     let valueInput = [valueFrominputNumberActivities,valueFrominputSchoolSubject,valueFrominputStudentName];
-    return valueInput;
+    
+    const especificValue = valueInput[position];
+
+    return especificValue;
 }
 
-const clickButton = () => {
-    console.log(getValuesInputs());
 
-    removeElementInHTML();
+const clickButton = () => {
+
+    if(getFirstContact(0) == "" || getFirstContact(1) == "" || getFirstContact(2) == ""){
+        alert("fill the input");
+    }else{
+        removeElementInHTML();
+    }
+
 }
