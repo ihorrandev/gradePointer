@@ -43,9 +43,41 @@ const getFirstContact = (position) => {
 const clickButton = () => {
 
     if(getFirstContact(0) == "" || getFirstContact(1) == "" || getFirstContact(2) == ""){
-        alert("fill the input");
+        alert('Fill the inputs');
+        return false;        
     }else{
         removeElementInHTML();
-    }
+        let divNewForm = document.getElementById('forNewForm');
+        let firstBtn = document.getElementById('buttonForm');
 
+        let inputTrackerActivities = document.createElement('input');
+        inputTrackerActivities.placeholder = `Enter 1 ${valueFrominputStudentName} grade`;
+        inputTrackerActivities.classList.add('inputRoot');
+
+        divNewForm.appendChild(inputTrackerActivities);
+        
+        
+
+        let newButton = document.createElement("button");
+        newButton.classList.add('btnGp-root-mainForm');
+        newButton.textContent = "Calculate";
+        
+        let activities = valueFrominputNumberActivities;
+        let gradesArray = [];
+
+        newButton.onclick = function () {
+            if(gradesArray.length < activities){
+                let trackerActivities = inputTrackerActivities.value;
+                gradesArray.push(trackerActivities);
+                console.log(gradesArray);
+            }else{
+                alert('Não da mais!');
+            }
+        };
+
+        
+
+        mainContent.appendChild(newButton);
+        firstBtn.style.display = 'none';
+    }
 }
