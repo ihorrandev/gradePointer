@@ -77,12 +77,17 @@ const clickButton = () => {
 
 
                /*  let i =0;
-                let teste = []
+                
                 while (i < gradesArray.length){
-                    teste.push(parseFloat(trackerActivities));
-                    spanGrade.textContent = teste;
+                    
                     i++;
                 } */
+
+                let teste = []
+                for(let i=0; i < gradesArray.length; i++){
+                    
+                    spanGrade.textContent = gradesArray;
+                }
                
 
                 let sumMedia = gradesArray.reduce((accumulator, value) => accumulator + value,0);
