@@ -69,6 +69,10 @@ const clickButton = () => {
         spanGrade.textContent = gradesArray;
         divNewForm.appendChild(spanGrade);
 
+        let spanAverage = document.createElement('span');
+        spanAverage.textContent = gradesArray;
+        divNewForm.appendChild(spanAverage);
+
         newButton.onclick = function () {
             if(gradesArray.length < activities){
                 let trackerActivities = inputTrackerActivities.value;
@@ -76,28 +80,23 @@ const clickButton = () => {
                 console.log(gradesArray);
 
 
-               /*  let i =0;
-                
-                while (i < gradesArray.length){
-                    
-                    i++;
-                } */
-
-                let teste = []
                 for(let i=0; i < gradesArray.length; i++){
-                    
-                    spanGrade.textContent = gradesArray;
+                    spanGrade.textContent = `Grades: ${gradesArray}`;
                 }
                
 
                 let sumMedia = gradesArray.reduce((accumulator, value) => accumulator + value,0);
                 let gradeMedia = sumMedia/activities;
+                
 
                 //spanGrade.textContent = `Your grade: ${trackerActivities}`;
 
                 //Write in the HTML for people see the grades
                 console.log(`Your grade: ${gradesArray}`);
                 console.log(gradeMedia);
+
+                spanAverage.textContent = `Your average is: ${gradeMedia.toFixed(1)}`; 
+
 
             }else{
                 alert('Não da mais!');
