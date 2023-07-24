@@ -39,7 +39,6 @@ const getFirstContact = (position) => {
     return especificValue;
 }
 
-
 const clickButton = () => {
 
     if(getFirstContact(0) == "" || getFirstContact(1) == "" || getFirstContact(2) == ""){
@@ -60,10 +59,15 @@ const clickButton = () => {
 
         let newButton = document.createElement("button");
         newButton.classList.add('btnGp-root-mainForm');
-        newButton.textContent = "Calculate";
+        newButton.textContent = "Enter your grade";
         
         let activities = valueFrominputNumberActivities;
         let gradesArray = [];
+
+
+        let spanGrade = document.createElement('span');
+        spanGrade.textContent = gradesArray;
+        divNewForm.appendChild(spanGrade);
 
         newButton.onclick = function () {
             if(gradesArray.length < activities){
@@ -71,8 +75,20 @@ const clickButton = () => {
                 gradesArray.push(parseFloat(trackerActivities));
                 console.log(gradesArray);
 
+
+               /*  let i =0;
+                let teste = []
+                while (i < gradesArray.length){
+                    teste.push(parseFloat(trackerActivities));
+                    spanGrade.textContent = teste;
+                    i++;
+                } */
+               
+
                 let sumMedia = gradesArray.reduce((accumulator, value) => accumulator + value,0);
                 let gradeMedia = sumMedia/activities;
+
+                //spanGrade.textContent = `Your grade: ${trackerActivities}`;
 
                 //Write in the HTML for people see the grades
                 console.log(`Your grade: ${gradesArray}`);
@@ -82,8 +98,7 @@ const clickButton = () => {
                 alert('Não da mais!');
             }
         };
-
-        
+       
 
         mainContent.appendChild(newButton);
         firstBtn.style.display = 'none';
