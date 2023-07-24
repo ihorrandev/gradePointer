@@ -65,11 +65,11 @@ const clickButton = () => {
         let gradesArray = [];
 
 
-        let spanGrade = document.createElement('span');
+        let spanGrade = document.createElement('p');
         spanGrade.textContent = gradesArray;
         divNewForm.appendChild(spanGrade);
 
-        let spanAverage = document.createElement('span');
+        let spanAverage = document.createElement('p');
         spanAverage.textContent = gradesArray;
         divNewForm.appendChild(spanAverage);
 
@@ -99,7 +99,19 @@ const clickButton = () => {
 
 
             }else{
-                alert('Não da mais!');
+                let spanError = document.createElement('p');
+                spanError.textContent = "You have exceeded the grade limit";
+                divNewForm.appendChild(spanError);
+                newButton.style.display = 'none';
+
+                let linkBtn = document.createElement('a');
+                linkBtn.href = '../pages/formPage.html';
+                linkBtn.classList.add('btnGp-root-mainForm');
+                linkBtn.textContent = "Return to form";
+
+                mainContent.appendChild(linkBtn);
+
+                return false;
             }
         };
        
