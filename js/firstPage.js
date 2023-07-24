@@ -67,6 +67,7 @@ const clickButton = () => {
 
         let spanGrade = document.createElement('p');
         spanGrade.textContent = gradesArray;
+        spanGrade.classList.add('blue-text')
         divNewForm.appendChild(spanGrade);
 
         let spanAverage = document.createElement('p');
@@ -74,6 +75,7 @@ const clickButton = () => {
         divNewForm.appendChild(spanAverage);
 
         newButton.onclick = function () {
+
             if(gradesArray.length < activities){
                 let trackerActivities = inputTrackerActivities.value;
                 gradesArray.push(parseFloat(trackerActivities));
@@ -95,7 +97,7 @@ const clickButton = () => {
                 console.log(`Your grade: ${gradesArray}`);
                 console.log(gradeMedia);
 
-                spanAverage.textContent = `Your average is: ${gradeMedia.toFixed(1)}`; 
+                spanAverage.textContent = `${valueFrominputStudentName} average is: ${gradeMedia.toFixed(1)}`; 
 
 
             }else{
