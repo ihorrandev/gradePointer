@@ -68,8 +68,16 @@ const clickButton = () => {
         newButton.onclick = function () {
             if(gradesArray.length < activities){
                 let trackerActivities = inputTrackerActivities.value;
-                gradesArray.push(trackerActivities);
+                gradesArray.push(parseFloat(trackerActivities));
                 console.log(gradesArray);
+
+                let sumMedia = gradesArray.reduce((accumulator, value) => accumulator + value,0);
+                let gradeMedia = sumMedia/activities;
+
+                //Write in the HTML for people see the grades
+                console.log(`Your grade: ${gradesArray}`);
+                console.log(gradeMedia);
+
             }else{
                 alert('Não da mais!');
             }
