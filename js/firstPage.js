@@ -76,6 +76,12 @@ const clickButton = () => {
 
         newButton.onclick = function () {
 
+            if(typeof activities == "string"){
+                alert('não da pra colocar texto');
+                inputTrackerActivities.value = "";
+                return false;
+            }
+
             if(gradesArray.length < activities){
                 let trackerActivities = inputTrackerActivities.value;
                 gradesArray.push(parseFloat(trackerActivities));
