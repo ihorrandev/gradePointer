@@ -52,6 +52,10 @@ const clickButton = () => {
         let inputTrackerActivities = document.createElement('input');
         inputTrackerActivities.placeholder = `Enter 1 ${valueFrominputStudentName} grade`;
         inputTrackerActivities.classList.add('inputRoot');
+        inputTrackerActivities.addEventListener('input', function (event) {
+            const input = event.target;
+            input.value = input.value.replace(/[^\d]/g, ''); 
+        });
 
         divNewForm.appendChild(inputTrackerActivities);
         
@@ -76,9 +80,15 @@ const clickButton = () => {
 
         newButton.onclick = function () {
 
-            if(typeof activities == "string"){
+/*             if(typeof activities == "string"){
                 alert('não da pra colocar texto');
                 inputTrackerActivities.value = "";
+                return false;
+            } */
+
+            
+            if (isNaN(inputTrackerActivities)) {
+                alert('Não pode! O valor não é numérico.');
                 return false;
             }
 
