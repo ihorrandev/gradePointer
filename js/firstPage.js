@@ -87,19 +87,23 @@ const clickButton = () => {
             } */
 
             
-            if (isNaN(inputTrackerActivities)) {
+
+            /* if (isNaN(inputTrackerActivities.value)) {
                 alert('Não pode! O valor não é numérico.');
                 return false;
-            }
+            } */
+
 
             if(gradesArray.length < activities){
                 let trackerActivities = inputTrackerActivities.value;
+
                 gradesArray.push(parseFloat(trackerActivities));
                 console.log(gradesArray);
 
 
                 for(let i=0; i < gradesArray.length; i++){
                     spanGrade.textContent = `Grades: ${gradesArray}`;
+                    inputTrackerActivities.value = "";
                 }
                
 
