@@ -3,7 +3,7 @@ _This project is a calculator of school averages, with teachers as the target au
 
 
 ## Technologies used
-📌 - All technologies used within the project
+📌 - All technologies used within the project :)
 
 > **JavaScript**: In this project, the JS programming language was used to review content for future specializations within the language. 
 
