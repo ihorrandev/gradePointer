@@ -54,7 +54,7 @@ const clickButton = () => {
         inputTrackerActivities.classList.add('inputRoot');
         inputTrackerActivities.addEventListener('input', function (event) {
             const input = event.target;
-            input.value = input.value.replace(/[^\d]/g, ''); 
+            input.value = input.value.replace(/[^\d]/g, '');
         });
 
         divNewForm.appendChild(inputTrackerActivities);
@@ -78,7 +78,9 @@ const clickButton = () => {
         spanAverage.textContent = gradesArray;
         divNewForm.appendChild(spanAverage);
 
-        newButton.onclick = function () {
+        newButtonValue = newButton.value;
+
+        newButton.onclick = function teste() {
 
 /*             if(typeof activities == "string"){
                 alert('não da pra colocar texto');
@@ -133,7 +135,7 @@ const clickButton = () => {
 
                 mainContent.appendChild(linkBtn);
 
-                return false;
+                return;
             }
         };
        
