@@ -99,7 +99,7 @@ const clickButton = () => {
                 return false;
             } */
 
-            //Convertendo os numeros passados 
+            //Convertendo os numeros passados para Inteiros
             const activities = parseInt(valueInput); // Parse the activities value to an integer
     
             if (isNaN(activities)) {
