@@ -14,6 +14,8 @@
     let valueFrominputStudentName = "";
     let valueFrominputNumberActivities = "";
 
+    let valueInput = [valueFrominputNumberActivities,valueFrominputSchoolSubject,valueFrominputStudentName];
+
 
 
 const removeElementInHTML = () => {
@@ -45,6 +47,7 @@ const clickButton = () => {
         alert('Fill the inputs');
         return false;        
     }else{
+
         removeElementInHTML();
         let divNewForm = document.getElementById('forNewForm');
         let firstBtn = document.getElementById('buttonForm');
@@ -67,6 +70,7 @@ const clickButton = () => {
         
         let activities = valueFrominputNumberActivities;
         let gradesArray = [];
+
 
 
         let spanGrade = document.createElement('p');
@@ -95,6 +99,14 @@ const clickButton = () => {
                 return false;
             } */
 
+            //Convertendo os numeros passados 
+            const activities = parseInt(valueInput); // Parse the activities value to an integer
+    
+            if (isNaN(activities)) {
+                alert('Activities value must be a number');
+                return false;
+            }
+           
 
             if(gradesArray.length < activities){
                 let trackerActivities = inputTrackerActivities.value;
