@@ -100,7 +100,7 @@ const clickButton = () => {
             } */
 
             //Convertendo os numeros passados para Inteiros
-            const activities = parseInt(valueInput); // Parse the activities value to an integer
+            const activities = parseInt(valueInput);
     
             if (isNaN(activities)) {
                 alert('Activities value must be a number');
