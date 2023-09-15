@@ -1,7 +1,7 @@
 # GradePointer Web Aplication
 _This project is a calculator of school averages, with teachers as the target audience._
 
-
+mklç
 ## Technologies used
 📌 - All technologies used within the project
 
